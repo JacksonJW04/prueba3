@@ -1,0 +1,132 @@
+import time
+def teatro():
+    cant1 = 0
+    cant2 = 0
+    cantad = 0
+    totale = 0
+    totala = 0
+    totalad = 0
+    total = 0
+    tipo = 0
+    preg1 = 0
+    preg2 = 0
+    preg3 = 0
+    descn = 0
+    desca = 0
+    descj = 0
+    print("---- Teatro Moro -------")
+    while True:
+        print("-- Ingrese la opción que desea --")
+        print("[1] Consulta de valores")
+        print("[2] Venta de entradas")
+        print("[3] Anular venta")
+        print("[4] Salir")
+        op = int(input("Ingresa la opción que desees: "))
+        
+        if op == 1:
+            print("\t-- Valores --")
+            print(" -------------------------------------------------------")
+            print("| Niños (Menores de 12 años): $4.000 - Descuento 10%    |")
+            print("| Jovenes (Entre 13 y 17 años): $6.000 - Descuento 7%  |")
+            print("| Adultos (18 años en adelante): $9.000 - Descuento 8% |")
+            print(" -------------------------------------------------------")
+        
+        if op == 2:
+            print("¿Que tipo de entrada deseas? [1]Niños [2]Jovenes [3]Adultos")
+            tipo = int(input("Ingresa aquí: "))
+            if tipo == 1:
+                print("Su tipo y/o edad pertenece a 'Niños'...")
+                print("Tiene un descuento de un 10%")
+                cant1 = int(input("¿Cuantas desea?: "))
+                valor = (5000)
+                totale = (cant1 * valor)
+                descn = (totale * 0.10)
+                print(f"Su total sin los descuentos respectivos es: {totale} [N] {totala} [JOV] {totalad} [AD]")
+                preg1 = int(input("¿Desea algo más? [1]Si [2]No [3]Anular compra [4] Imprimir boleta: "))
+                if preg1 == 4:
+                    total = (totala + totale + totalad)
+                    print("Imprimiendo boleta espere un momento...")
+                    time.sleep(1.5)
+                    print("Entradas: ")
+                    print("  ------------------------------------------------------------- ")
+                    print(f"|{cant1} entradas niños\t\t{totale} {descn}                   |")
+                    print(f"|{cant2} entradas jovenes\t\t{totala} {descj}                 |")
+                    print(f"|{cantad} entradas adultos\t\t{totalad} {desca}               |")
+                    print("  ------------------------------------------------------------- ")
+                    print(f"|Subtotal\t\t{totale + totala + totalad}                      |")
+                    print(f"|Descuentos\t\t{desca + descj + descn}                        |")
+                    print("  ------------------------------------------------------------- ")
+                    
+                    print("  ------------------------------------------------------------------------ ")
+                    print(f"|Total a pagar\t\t{(totala + totale + totalad) - (desca + descj + descn)}|")
+                    print("  ------------------------------------------------------------------------ ")
+                    print("\t¡Gracias por su compra!")  
+            elif tipo == 2:
+                print("Su tipo y/o edad pertenece a 'Jovenes'...")
+                print("Tiene un descuento de un 7%")
+                cant2 = int(input("¿Cuantas desea?: "))
+                valora = (7000)
+                totala = (cant2 * valora)
+                descj = (totala * 0.07)
+                print(f"Su total sin los descuentos respectivos es: {totale} [N] {totala} [JOV] {totalad} [AD]")
+                preg2 = int(input("¿Desea algo más? [1]Si [2]No [3]Anular compra [4] Imprimir boleta: "))
+                if preg2 == 4:
+                    total = (totala + totale + totalad)
+                    print("Imprimiendo boleta espere un momento...")
+                    time.sleep(1.5)
+                    print("Entradas: ")
+                    print("  ------------------------------------------------------------- ")
+                    print(f"|{cant1} entradas niños\t\t{totale} {descn}                   |")
+                    print(f"|{cant2} entradas jovenes\t\t{totala} {descj}                 |")
+                    print(f"|{cantad} entradas adultos\t\t{totalad} {desca}               |")
+                    print("  ------------------------------------------------------------- ")
+                    print(f"|Subtotal\t\t{totale + totala + totalad}                      |")
+                    print(f"|Descuentos\t\t{desca + descj + descn}                        |")
+                    print("  ------------------------------------------------------------- ")
+                    
+                    print("  ------------------------------------------------------------------------ ")
+                    print(f"|Total a pagar\t\t{(totala + totale + totalad) - (desca + descj + descn)}|")
+                    print("  ------------------------------------------------------------------------ ")
+                    print("\t¡Gracias por su compra!")  
+            elif tipo == 3:
+                print("Su tipo y/o edad pertenece a 'Adulto'...")
+                print("Tiene un descuento de un 8%")
+                cantad = int(input("¿Cuantas desea?: "))
+                valorad = (10000)
+                totalad = (cantad * valorad)
+                desca = (totalad * 0.08)
+                print(f"Su total sin los descuentos respectivos es: {totale} [N] {totala} [JOV] {totalad} [AD]")
+                preg3 = int(input("¿Desea algo más? [1]Si [2]No [3]Anular compra [4] Imprimir boleta: "))
+                if preg3 == 4:
+                    total = (totala + totale + totalad)
+                    print("Imprimiendo boleta espere un momento...")
+                    time.sleep(1.5)
+                    print("Entradas: ")
+                    print("  ------------------------------------------------------------- ")
+                    print(f"|{cant1} entradas niños\t\t{totale} {descn}                   |")
+                    print(f"|{cant2} entradas jovenes\t\t{totala} {descj}                 |")
+                    print(f"|{cantad} entradas adultos\t\t{totalad} {desca}               |")
+                    print("  ------------------------------------------------------------- ")
+                    print(f"|Subtotal\t\t{totale + totala + totalad}                      |")
+                    print(f"|Descuentos\t\t{desca + descj + descn}                        |")
+                    print("  ------------------------------------------------------------- ")
+                    
+                    print("  ------------------------------------------------------------------------ ")
+                    print(f"|Total a pagar\t\t{(totala + totale + totalad) - (desca + descj + descn)} |")
+                    print("  ------------------------------------------------------------------------ ")
+                    print("\t¡Gracias por su compra!")       
+            
+        if op == 3 and total == 0:
+            print("[ERROR] No tienes ninguna compra pendiente.")
+        elif op == 3 and total > 0:
+           
+            print("[INFO] Su pedido a sido anulado correctamente .")
+        elif preg1 == 3 or preg2 == 3 or preg3 == 3:
+            
+            print("Su pedido a sido anulado correctamente .")
+        
+        if op == 4:
+            print("[INFO] Saliendo del programa...")
+        time.sleep(1)
+        break
+teatro()
